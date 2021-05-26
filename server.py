@@ -6,7 +6,7 @@ import pickle
 #2 - b
 data = {'field':[0,0,0],'command':'',"msg":''}
 sock = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
-sock.bind(('192.168.1.22',8000))
+sock.bind((input('enter server adress'),8000))
 info = socket.gethostname()
 sock.listen(5)
 print(f'server is running at {info}')
