@@ -21,7 +21,7 @@ while True:
       print(f'and youre player {pl}!')
       break
     elif msg['command'] == 'yt' and msg['field'][0]!=pl:
-      msg['msg'] = random.randint(0,2)
+      msg['msg'] = int(input('your turn >>'))
       msg['field'][0]=pl
       s.sendall(pickle.dumps(msg))
       time.sleep(5)
