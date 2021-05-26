@@ -9,7 +9,7 @@ pl = int(input('enter player num'))
 while True:
   try:
     s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
-    s.connect(('192.168.1.22',8000))
+    s.connect((input('enter host address'),8000))
     msg = pickle.loads(s.recv(1024))
 
     if msg['command'] == 'e':
